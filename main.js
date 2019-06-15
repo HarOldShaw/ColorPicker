@@ -26,8 +26,9 @@ function setupModeButtons() {
         modeButtons[i].addEventListener("click", function() {
             modeButtons[0].classList.remove("selected");
             modeButtons[1].classList.remove("selected");
+            modeButtons[2].classList.remove("selected");
             this.classList.add("selected");
-            this.textContent === "Easy" ? difficulty = 3 : difficulty = 6;
+            this.textContent === "Easy" ? difficulty = 3 : (this.textContent === "Normal" ? difficulty = 6 : difficulty = 9);
             reset();
         });
     }
